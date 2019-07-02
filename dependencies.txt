@@ -1,0 +1,9 @@
+Django==2.2.1
+mysql-connector-python==8.0.11
+Pillow==5.1.0
+protobuf==3.5.2.post1
+pytz==2018.4
+six==1.11.0
+sorl-thumbnail==12.4.1
+sqlparse==0.3.0
+virtualenv==16.0.0
