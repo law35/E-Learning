@@ -1,0 +1,36 @@
+{% extends 'display.html' %}
+
+{% block title %}
+	{{instance.title}} | {{block.super}}
+{% endblock %}
+
+
+{% block module_list %}
+<style>
+	#para{
+		width: 50%;
+		margin-left: 25%;
+		text-align: left;
+		border-style:dashed;
+		border-color:red;
+		overflow:scroll;
+	}
+	
+</style>
+	{% for query in object_list %}
+	<div id="module-item" style="border-style:solid; border-color:black;">
+		{% if query.thumbnail %}
+		<div style="margin-top:10px;">
+			<img src='{{query.thumbnail.url}}' class="image-responsive"/>
+		</div>
+		{% endif %}
+		<section>
+			<h1 style="color:white; text-decoration:underline;">{{query.title}}</h1>
+			<div id="para">
+				<p>{{query.description|linebreaks}}</p>
+			</div>
+			<p>Last updated: </p>{{query.updated}}
+		</section>
+	</div>
+	{% endfor %}
+{% endblock %}
