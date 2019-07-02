@@ -1,0 +1,99 @@
+<!DOCTYPE html> <--Version: 1.0-->
+{% load staticfiles %}
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title></title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="http://fonts.googleapis.com/css?family=Varela" rel="stylesheet" />
+<link rel="stylesheet" href="{% static 'css/default.css' %}" media="all"/>
+<link rel="stylesheet" href="{% static 'css/fonts.css' %}" media="all"/>
+{% block link %}{% endblock %}
+{% block script %}{% endblock %}
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
+<!-- <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script> -->
+{% block style %}{% endblock %}
+
+<!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+
+</head>
+<body>
+<div id="header-wrapper" style="background: #333333;">
+	<div id="header" class="container">
+		<div id="logo">
+			<h1><a href="#">Science By Oscar</a></h1>
+		</div>
+		<div id="header-menu">
+			<ul>
+				<li><a href="{% url 'home' %}">Homepage</a></li>
+				<li><a href="#" accesskey="2" title="">Our Clients</a></li>
+				<li><a href="{% url 'breaking-news' %}">News</a></li>
+				<li><a href="#" accesskey="4" title="">Careers</a></li>
+				<li><a href="#" accesskey="5" title="">Contact Us</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div id="sec-wrapper" style="background:#FFF;">
+	<div id="bio-container">
+		<div class="container">
+			<div class="title">
+				<h2 id="bio">Biology</h2>
+				<span class="byline">Cells, Genetics, Anatomy...</span> 
+			</div>
+			<ul class="actions">
+				<li><a href="{% url 'biology' %}" class="button">Proceed</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="st-container">
+		<div class="container">
+			<div class="title">
+				<h2 id="surg">Surgical Technology</h2>
+				<span class="byline">Surgical Procedures, Sterile Technique, Ethics...</span> 
+			</div>
+			<ul class="actions">
+				<li><a href="{% url 'surgical' %}" class="button">Proceed</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="cp-container">
+		<div class="container">
+			<div class="title">
+				<h2 id="com-pro">Computer Programming</h2>
+				<span class="byline">Python, SQL, Web Design...</span> 
+			</div>
+			<ul class="actions">
+				<li><a href="{% url 'programming' %}" class="button">Proceed</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="art-container">
+		<div>
+			<div class="title">
+				<h2 id="art">News</h2>
+				<span class="byline">Biology, Surgery, Programming...</span>
+			</div>
+			<ul class="actions">
+				<li><a href="{% url 'breaking-news' %}" class="button">Proceed</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div id="footer" class="container">
+
+</div>
+
+</div>
+<script>
+	$('#news-feed').rss("https://www.sciencedaily.com/rss/top/science.xml");
+</script>
+
+<script>
+	$('#news-feed1').rss("https://www.nature.com/subjects/surgery.rss");
+</script>
+</body>
+</html>
