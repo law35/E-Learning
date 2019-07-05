@@ -4,5 +4,4 @@ from .views import NewsUpdates
 
 urlpatterns = [
    path('', NewsUpdates.news, name='breaking-news'),
-   path('home/', NewsUpdates.homePage, name='home'),
 ]
