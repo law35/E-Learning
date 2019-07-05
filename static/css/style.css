@@ -1,9 +1,8 @@
 @media screen and (max-width: 1020px){
 	#wrapper, #header-wrapper,
 	#header, #header-menu,
-	#bio-container, #footer,
-	#bio, #surg, #sub-header,
-	#com-pro, #cp-container,
+	#base-wrapper, #footer,
+	#sub-header,
 	.container,
 	.title,
 	.button,
@@ -15,11 +14,7 @@
 		display: none;
 	}
 	
-	#cp-container{
-		display: flex;
-	}
-	
-	#st-container{
+	#base-wrapper{
 		display: flex;
 	}
 }
@@ -153,18 +148,6 @@ a:hover{
       0 14px 0 #141414, 0 15px 0 #121212, 
       0 22px 30px rgba(0, 0, 0, 0.9);
   }
-  
-#surg, 
-#art, 
-#bio, 
-#com-pro {
-	font-weight: bold;
-	text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 
-	0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 
-	0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 
-	0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 
-	0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
-}
 
 /*-----------*/
 /*List Styles*/
@@ -369,11 +352,11 @@ ul.contact li a.icon-rss:before { background: #F2600B; }
 }
 
 
-/*-------*/	
-/*Biology*/
-/*-------*/
+/*------------*/	
+/*Base Wrapper*/
+/*------------*/
 
-#bio-container{
+#base-wrapper{
 	display: flex;
 	overflow: auto;
 	padding: 7em 0em 5em 0em;
@@ -383,38 +366,22 @@ ul.contact li a.icon-rss:before { background: #F2600B; }
 	color: rgba(255,255,255,.8);
 }
 
-#bio-container .title{
+#base-wrapper .title{
 	margin-bottom: 1em;
 	text-transform: uppercase !important;
 }
 
-#bio-container .title h2{
+#base-wrapper .title h2{
 	color: #FFF;
 }
 
-#bio-container .title .byline{
+#base-wrapper .title .byline{
 	color: rgba(255,255,255,.6);
 }
 	
-#bio-container .button{
+#base-wrapper .button{
 	margin-top: 3em;
 	background: #003366 !important;
-}
-
-/*--------*/	
-/*Articles*/
-/*--------*/
-
-#art-container{
-	
-	padding: 5em 0em;
-	text-align: center;
-}
-	
-#art-container .button{
-	margin-top: 2em;
-	display: inline-block;
-	text-align: center;
 }
 
 /*------*/	
@@ -436,62 +403,4 @@ ul.contact li a.icon-rss:before { background: #F2600B; }
 #footer a{
 	text-decoration: none;
 	color: rgba(255,255,255,0.8);
-}
-
-/*-----------*/	
-/*Programming*/
-/*-----------*/
-
-#cp-container{
-	overflow: hidden;
-	padding: 5em 0em;
-	background: #003366;
-	color: rgba(255,255,255,.8);
-	text-align: center;
-}
-
-#cp-container a{
-	color: rgba(255,255,255,1);
-}
-	
-#cp-container .button{
-	background: #FFF;
-	margin-top: 3em;
-	font-size: 1em;
-	color: #003366;
-}
-
-#cp-container .title{
-}
-
-#cp-container .title h2{
-	color: #FFF;
-}
-
-#cp-container .title .byline{
-	color: rgba(255,255,255,.6);
-}
-
-/*--------------*/	
-/*Surgical Tech.*/
-/*--------------*/
-
-#st-container{
-	overflow: hidden;
-	padding: 5em 0em;
-}
-	
-#st-container .title{
-	text-align: center;
-}
-	
-#st-container .button{
-	margin-top: 5em;
-}
-	
-#st-container .fa{
-	display: flex;
-	margin-bottom: 0.5em;
-	text-align: center;
-	font-size: 3em;
 }
