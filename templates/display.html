@@ -46,7 +46,7 @@
 <div id="header-wrapper">
 	<div id="header" class="container">
 		<div id="logo">
-			<h1><a href="#">Science By Oscar</a></h1>
+			<h1><a href="{% url 'home' %}">Neo Polymaths</a></h1>
 		</div>
 		<div id="header-menu">
 			<ul>
@@ -86,7 +86,7 @@
 		</ul>
 	</div>
 	{% block title %}{% endblock %}
-	<div id="bio-container">
+	<div id="base-wrapper">
 		<div class="container" class="infinite-container">
 			{% block module_list %}{% endblock %}
 			<!--<div class="content"></div>-->
