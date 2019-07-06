@@ -1,0 +1,54 @@
+{% extends 'display.html' %}
+
+
+{% block journals %}
+<li><a href="{% url 'biology-journals' %}">Journals</a></li>
+{% endblock %}
+
+{% block backup %}
+<li><a href="{% url 'units' %}" accesskey="5" title="">Back</a></li>
+{% endblock %}
+
+{% block module_list %}
+<style>
+	a{
+		color: #1a75ff;
+	}
+	#para{
+		width: 90%;
+		margin-left: 5%;
+		text-align: left;
+		display; flex;
+	}
+	
+	#article-item{
+		margin-left:10%;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		background: #333333;
+	}
+</style>
+	{% for query in object_list %}
+	<div id="article-item" style="border-style:solid; border-color:black; width:80%;">
+		<h3 style="color:white;">
+			<a href='{{query.website}}'>Article source</a>
+		</h3>
+		{% if query.thumbnail %}
+			<div style="margin-top:10px;">
+				<a href='{{query.file_upload.url}}'>
+					<img src='{{query.thumbnail.url}}' class="image-responsive"/>
+				</a>
+			</div>
+		{% endif %}
+		<section>
+			<a href='{{query.file_upload.url}}'>
+				<h1 style="color:white; text-decoration:underline;">{{query.title}}</h1>
+			</a>
+			<div id="para">
+				<p>{{query.description|linebreaks}}</p>
+			</div>
+			<p>Last updated: </p>{{query.updated}}
+		</section>
+	</div>
+	{% endfor %}
+{% endblock %}
